@@ -1,0 +1,141 @@
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,200px);
+    grid-gap: 20px;
+}
+
+@media only screen and (max-width: 950px){
+    .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 20px;
+}
+}
+
+
+
+.grid div:nth-child(1){
+    background: red;
+    grid-column: 1 /1;
+    
+}
+
+@media only screen and (max-width: 950px){
+   .grid div:nth-child(1){
+    background: orange;
+    grid-column: 1 /1;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .grid div:nth-child(1){
+    background: green;
+    grid-column: 1 /-1;
+}
+}
+
+.grid div:nth-child(2){
+    background: orange;
+    grid-column: 2 /4;
+    
+}
+
+@media only screen and (max-width: 950px){
+   .grid div:nth-child(2){
+    background: purple;
+    grid-column:  /4;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .grid div:nth-child(2){
+        display: none;
+    } 
+}
+
+
+
+.grid div:nth-child(3){
+    background: green;
+    grid-column: 1 /-1;
+    grid-row: 2/2  
+}
+
+@media only screen and (max-width: 950px){
+   .grid div:nth-child(3){
+    background: red;
+    grid-column: 2/;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .grid div:nth-child(3){
+    background: purple;
+    grid-column: 1 /-1;
+    grid-row: 2/2  
+}
+
+}
+
+.grid div:nth-child(4){
+    background: brown;
+    grid-column: 1 ;
+}
+
+@media only screen and (max-width: 950px){
+   .grid div:nth-child(4){
+    background: green;
+    grid-column-start: 1;
+    grid-column-end: ;    
+    }
+}
+
+@media only screen and (max-width: 600px){
+   .grid div:nth-child(4){
+    background: red;
+    grid-column: 1/ -1 ;
+} 
+}
+
+.grid div:nth-child(5){
+    background: blue;
+    grid-column: 2 /;
+    grid-template-rows: 250px;
+    grid-row:
+}
+
+@media only screen and (max-width: 950px){
+    .grid div:nth-child(5){
+    background: blue;
+    grid-column: 1/;
+    }
+}
+@media only screen and (max-width: 600px){
+    .grid div:nth-child(5){
+        display: none;
+    }
+}
+
+.grid div:nth-child(6){
+    background: purple;
+    grid-column: 1 /;
+}
+
+@media only screen and (max-width: 950px){
+    .grid div:nth-child(6){
+        display: none;
+    }
+}
+@media only screen and (max-width: 600px){
+    .grid div:nth-child(6){
+        display: none;
+    }
+}
+
+.grid div{
+    border: 1px solid #212941;
+}
